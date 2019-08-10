@@ -149,7 +149,7 @@ Synergy Configuration
       P511 176 - - - - Disabled - - "CAN1: CRX; GPT0: GTIOCB; IIC2: SDA; IRQ0: IRQ15; PDC0: PCKO; SCI4: RXD_MISO; SCI4: SCL" 
       P512 175 - - - - Disabled - - "CAN1: CTX; GPT0: GTIOCA; IIC2: SCL; IRQ0: IRQ14; PDC0: VSYNC; SCI4: SDA; SCI4: TXD_MOSI" 
       P513 174 - - - - Disabled - - "GLCDC0: LCD_DATA16" 
-      P600 122 GPIO GPIO11 Medium - "Output mode (Initial Low)" CMOS None "BUS0: RD; GLCDC0: LCD_DATA02" 
+      P600 122 GPIO GPIO11 Low - "Output mode (Initial Low)" CMOS None "BUS0: RD; GLCDC0: LCD_DATA02" 
       P601 121 GPIO GPIO9 Medium - "Output mode (Initial Low)" CMOS None "BUS0: WR_WR0_DQM0; GLCDC0: LCD_DATA03" 
       P602 120 GPIO GPIO8 Medium - "Output mode (Initial Low)" CMOS None "BUS0: BCLK_SDCLK; GLCDC0: LCD_DATA04" 
       P603 119 GPIO GPIO3 - - "Input mode" - None "BUS0: D13_DQ13" 
@@ -263,6 +263,9 @@ Synergy Configuration
   Module "External IRQ Driver on r_icu"
     Parameter Checking: Default (BSP)
     
+  Module "Timer Driver on r_gpt"
+    Parameter Checking: Default (BSP)
+    
   HAL
     Instance "g_elc ELC Driver on r_elc"
       Name [Fixed]: g_elc
@@ -285,5 +288,21 @@ Synergy Configuration
       Interrupt enabled after initialization: True
       Callback: button_callback_SW5
       Pin Interrupt Priority: Priority 12
+      
+    Instance "g_timer0 Timer Driver on r_gpt"
+      Name: g_timer0
+      Channel: 0
+      Mode: Periodic
+      Period Value: 500
+      Period Unit: Milliseconds
+      Duty Cycle Value: 50
+      Duty Cycle Unit: Unit Raw Counts
+      Auto Start: True
+      GTIOCA Output Enabled: True
+      GTIOCA Stop Level: Pin Level Low
+      GTIOCB Output Enabled: False
+      GTIOCB Stop Level: Pin Level Low
+      Callback: NULL
+      Overflow Interrupt Priority: Disabled
       
   Messaging

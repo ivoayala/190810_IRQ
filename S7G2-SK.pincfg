@@ -348,7 +348,7 @@
   </v1:configSetting>
   <v1:configSetting configurationId="p405.gpio_drivecapacity" altId="p405.gpio_speed.gpio_speed_high"/>
   <v1:configSetting configurationId="p602.gpio_drivecapacity" altId="p602.gpio_speed.gpio_speed_medium"/>
-  <v1:configSetting configurationId="p600.gpio_drivecapacity" altId="p600.gpio_speed.gpio_speed_medium"/>
+  <v1:configSetting configurationId="p600.gpio_drivecapacity" altId="p600.gpio_speed.gpio_speed_low"/>
   <v1:configSetting configurationId="p502.gpio_mode" altId="p502.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p310.gpio_mode" altId="p310.gpio_mode.gpio_mode_in"/>
   <v1:configSetting configurationId="p403.gpio_drivecapacity" altId="p403.gpio_speed.gpio_speed_medium"/>

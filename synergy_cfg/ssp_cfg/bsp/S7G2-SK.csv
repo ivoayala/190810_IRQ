@@ -472,7 +472,7 @@ PDC0: VSYNC
 SCI4: SDA
 SCI4: TXD_MOSI"
 "P513","174","","","","","Disabled","","","GLCDC0: LCD_DATA16"
-"P600","122","GPIO","GPIO11","Medium","","Output mode (Initial Low)","CMOS","None","BUS0: RD
+"P600","122","GPIO","GPIO11","Low","","Output mode (Initial Low)","CMOS","None","BUS0: RD
 GLCDC0: LCD_DATA02"
 "P601","121","GPIO","GPIO9","Medium","","Output mode (Initial Low)","CMOS","None","BUS0: WR_WR0_DQM0
 GLCDC0: LCD_DATA03"
